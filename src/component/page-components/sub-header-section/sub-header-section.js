@@ -14,7 +14,7 @@ function SubHeaderSection() {
         No prior coding knowledge is required. Join us and master it. We will teach you from scratch.
         <div className="text-[#ed970b]">End of the session you'll gain confidence.</div>
       </div>
-      <div className="p-8 flex gap-3 justify-center items-center">
+      <div className="p-8 flex flex-wrap gap-3 justify-center items-center">
         <div>Register and get your syllabus for the class.</div>
         <div>
           <button className="tutor-btn" onClick={registerForSession}>Register</button>

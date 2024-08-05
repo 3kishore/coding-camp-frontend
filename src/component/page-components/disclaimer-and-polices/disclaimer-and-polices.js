@@ -35,12 +35,23 @@ function DisclaimerAndPolicies() {
           </div>
         </div>
         <div className="py-3">
-          If you have any questions about this Privacy Policy, please contact us at: Bussiness Lab: kishore.codingcamp@gmail.com
+          If you have any questions about this Privacy Policy, please contact us at: kishore.codingcamp@gmail.com
         </div>
       </div>
       <div className="w-full text-xl pt-8 flex flex-wrap justify-center gap-7">
         <div className="cursor-pointer" onClick={redirectToTandC}>Terms & Condition</div>
         <div className="cursor-pointer" onClick={redirectToPrivacyPolicy}>Privacy Policy</div>
+      </div>
+      <div className="w-fit pt-8">
+        <div>Contact Us</div>
+        <div className="w-full text-xl flex flex-wrap items-center gap-2">
+          <div className="text-lg font-medium text-[#fff]">Email: </div>
+          <div className="text-sm text-[#fff]">kishore.codingcamp@gmail.com</div>
+        </div>
+        <div className="w-full text-xl flex flex-wrap items-center gap-2">
+          <div className="text-lg font-medium text-[#fff]">Address: </div>
+          <div className="text-sm text-[#fff]">No 41, 4th street devar nagar, vyasarpadi, chennai - 600039.</div>
+        </div>
       </div>
     </div>
   )  

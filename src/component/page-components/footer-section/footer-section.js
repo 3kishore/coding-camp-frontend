@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function FooterSectionComponent() {
   var [minute, setMinute] = useState(45);
   var [second, setSecond] = useState(60);
-  var [offerEnded, changeOfferStatus] = useState(false);
+  // var [offerEnded, changeOfferStatus] = useState(false);
 
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ function FooterSectionComponent() {
         setLocalStorage();
       }
     } else {
-      changeOfferStatus(true);
+      // changeOfferStatus(true);
     }
   }
 
@@ -57,7 +57,7 @@ function FooterSectionComponent() {
   },[minute, second])
   return (
     <div className="flex text-[#fff] justify-center items-center gap-[12px] tutor-bottom-section">
-      <div className="flex gap-1 justify-center items-center">
+      {/* <div className="flex gap-1 justify-center items-center">
         <div>offer Ends in:</div>
         <div className="flex gap-1">
           <div className="hurrytimer-timer-block">
@@ -70,8 +70,9 @@ function FooterSectionComponent() {
             <div className="hurrytimer-timer-label">mins</div>
           </div>
         </div>
-      </div>
-      <div>Register For The Workshop For &nbsp;<span className={!offerEnded ? "line-through text-[#ed970b]" : null}>₹499</span>&nbsp;<span>{!offerEnded && '₹199'}</span></div>
+      </div> */}
+      {/* <div>Register For The Workshop For &nbsp;<span className={!offerEnded ? "line-through text-[#ed970b]" : null}>₹499</span>&nbsp;<span>{!offerEnded && '₹199'}</span></div> */}
+      <div>Register For The Workshop For &nbsp;<span className="line-through text-[#ed970b]">₹499</span>&nbsp;<span>₹199</span></div>
       <button className="tutor-btn" onClick={registerForSession}>Register</button>
     </div>
   )
