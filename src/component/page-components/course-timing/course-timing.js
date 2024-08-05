@@ -8,7 +8,7 @@ function CourseTimingComponent() {
       </div>
 
       <div className="text-2xl font-medium text-[#ed970b] pt-[8px] pb-[12px] flex justify-center">Session details:</div>
-      <div className="flex justify-center">
+      <div className="flex flex-wrap justify-center">
         <div className="elementor-widget-wrap">
           <span className="material-symbols-outlined text-orange">calendar_month</span> Dates: 7-Sept, 8-Sept, 14-Spet and 15-Sept
         </div>
