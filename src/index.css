@@ -8,6 +8,10 @@ body {
 }
 
 .tutor-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   font-family: poppins, Sans-serif;
   font-size: 20px;
   font-weight: 500;
@@ -24,6 +28,34 @@ body {
   background-color: rgb(22, 120, 176);
   scale: 1.04;
   transition: 0.5s ease-out;
+}
+
+.tutor-btn:disabled {
+  background-color: grey;
+}
+
+.tutor-btn:disabled:hover {
+  background-color: grey;
+  scale: 1;
+  transition: 0.5s ease-out;
+}
+
+.tutor-btn.cancel {
+  background-color: #fff;
+  color: #000;
+}
+
+.tutor-btn.cancel:hover {
+  background-color: #cbd5f7;
+}
+
+.tutor-btn.success {
+  background-color: #33d305;
+  color: #fff;
+}
+
+.tutor-btn.success:hover {
+  background-color: #3ff20b;
 }
 
 .tutor-btn:disabled {

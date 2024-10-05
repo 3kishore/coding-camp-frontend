@@ -42,7 +42,6 @@ function PaymentSuccess() {
             </div>
           </div>
         </div>
-
         <div className="text-[20px] font-bold text-center">You will recive your study in material in your registered mail ID</div>
       </div>
     </div>

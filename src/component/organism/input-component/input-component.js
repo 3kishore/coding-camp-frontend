@@ -36,7 +36,7 @@ const InputComponent = ({
           }
         </button>}
       </div>
-      {meta.submitFailed && <div className="mt-2 text-xs text-red-dark">{meta.error}</div>}
+      {meta.touched && <div className="mt-2 text-xs text-red-dark">{meta.error}</div>}
     </div>
   )
 }
