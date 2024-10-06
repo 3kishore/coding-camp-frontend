@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
-import crypto from 'crypto-js';
-import Axios from 'axios';
+import { APP_CONST } from '../../../constants/app-constant';
 
 const loadScript = src => new Promise((resolve) => {
   const script = document.createElement('script');
@@ -17,7 +16,7 @@ const loadScript = src => new Promise((resolve) => {
 const RenderRazorpay = ({
   orderId,
   keyId,
-  keySecret,
+  // keySecret,
   currency,
   amount,
   userDetails
@@ -47,21 +46,6 @@ const RenderRazorpay = ({
     rzp1.open();
   };
 
-  // informing server about payment
-  const handlePayment = async (status) => {
-    await Axios.post('http://localhost:5000/order/capture-payment',
-      {
-        status,
-        userDetails,
-      }).then(res => {
-        if(res && res.data.status) {
-          // navigate('/payment-success')
-          window.location.replace('/payment-success')
-        }
-      });
-  };
-
-
   // we will be filling this object in next step.
     const options = {
     key: keyId,
@@ -73,37 +57,23 @@ const RenderRazorpay = ({
     prefill: {
       name: userDetails.name,
       email: userDetails.emailId,
-      contact: userDetails.mobileNo
+      contact: userDetails.mobileNo,
+      currentStatus: userDetails.currentStatus,
+      dateOfBirth: userDetails.dateOfBirth,
+      courseStartDate: userDetails.courseStartDate,
+      timeing: userDetails.timeing,
+      shift: userDetails.shift     
     },
     handler: (response) => {
-      paymentId.current = response.razorpay_payment_id;
-      const succeeded = crypto.HmacSHA256(`${orderId}|${response.razorpay_payment_id}`, keySecret).toString() === response.razorpay_signature;
-
-      userDetails.paymentId = paymentId;
-      userDetails.orderId = orderId;
-      userDetails.paymentSign = response.razorpay_signature;
-      if (succeeded) {
-        handlePayment('succeeded');
-      } else {
-        handlePayment('failed');
-      }
+        localStorage.setItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.USER_DETAILS), btoa(JSON.stringify(userDetails)))
+        localStorage.setItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.PAYMENT_INFO), btoa(JSON.stringify(response)))
+        setTimeout(() => {
+          window.location.replace('/validate-payment')
+        }, 500)
     },
     modal: {
       confirm_close: true,
-      ondismiss: async (reason) => {
-        // const {
-        //   reason: paymentReason, field, step, code,
-        // } = reason && reason.error ? reason.error : {};
-        if (reason === undefined) {
-          handlePayment('Cancelled');
-        }
-        else if (reason === 'timeout') {
-          handlePayment('timedout');
-        } 
-        else {
-          handlePayment('failed');
-        }
-      },
+      ondismiss: async (_) => {},
     },
     retry: {
       enabled: false,

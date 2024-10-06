@@ -39,8 +39,8 @@ function DisclaimerAndPolicies() {
         </div>
       </div>
       <div className="w-full text-xl pt-8 flex flex-wrap justify-center gap-7">
-        <div className="cursor-pointer" onClick={redirectToTandC}>Terms & Condition</div>
-        <div className="cursor-pointer" onClick={redirectToPrivacyPolicy}>Privacy Policy</div>
+        <div className="cursor-pointer text-blue hover:underline" onClick={redirectToTandC}>Terms & Condition</div>
+        <div className="cursor-pointer text-blue hover:underline" onClick={redirectToPrivacyPolicy}>Privacy Policy</div>
       </div>
       <div className="w-fit pt-8">
         <div>Contact Us</div>

@@ -6,6 +6,7 @@ import PrivacyPolicyComponent from './component/page/privacy-policy/privacy-poli
 import TermsAndConditionsComponent from './component/page/terms-and-condtion/terms-and-condtion';
 import PaymentSuccess from './component/page/payment-success/payment-success';
 import PaymentFailed from './component/page/payment-failed/payment-failed';
+import ValidatePayment from './component/page/payment-validation/payment-validation';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditionsComponent />} />
         <Route path="/payment-success" element={<PaymentSuccess />} />
         <Route path="/payment-failed" element={<PaymentFailed />} />
+        <Route path="/validate-payment" element={<ValidatePayment />} />
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </BrowserRouter>

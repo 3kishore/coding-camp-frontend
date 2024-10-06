@@ -1,4 +1,20 @@
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom";
+import { APP_CONST } from "../../../constants/app-constant"
+
 function PaymentSuccess() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    let paymentStatus = localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.IS_PAYMENT_CAPTURED))
+    if(paymentStatus) {
+      if(atob(paymentStatus) === APP_CONST.NOT_CAPTURED) {
+        navigate('/payment-failed')
+      }
+    } else {
+      navigate('/home')
+    }
+  }, [])
   return (
     <div className="w-full h-full flex justify-center">
       <div className="border-solid border-[1px] border-[#EDEDED] rounded-xl shadow-sm w-[450px] h-[600px] my-8 p-6 flex flex-col gap-6">
