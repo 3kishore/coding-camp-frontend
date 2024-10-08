@@ -14,6 +14,7 @@ function PaymentSuccess() {
     } else {
       navigate('/home')
     }
+    // eslint-disable-next-line 
   }, [])
   return (
     <div className="w-full h-full flex justify-center">

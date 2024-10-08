@@ -61,7 +61,7 @@ function FooterSectionComponent() {
     // eslint-disable-next-line
   },[minute, second])
   return (
-    <div className="flex text-[#fff] justify-center items-center gap-[12px] tutor-bottom-section">
+    <div className="flex text-[#fff] justify-center items-center gap-[12px] tutor-bottom-section z-[999]">
       {!offerEnded && <div className="flex gap-1 justify-center items-center">
         <div>offer Ends in:</div>
         <div className="flex gap-1">

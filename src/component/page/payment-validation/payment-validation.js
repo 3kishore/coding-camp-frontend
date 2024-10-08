@@ -76,6 +76,7 @@ function ValidatePayment() {
   useEffect(() => {
     checkPaymentDone()
     console.log('Got fired two times')
+    // eslint-disable-next-line
   }, [])
 
   return (

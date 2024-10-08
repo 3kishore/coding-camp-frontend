@@ -1,12 +1,15 @@
 import htmlImgPath from './html.png';
 import cssImgPath from './CSS.png';
 import jsImgPath from './JavaScript.png';
+import Carousel from '../../organism/carousel/carousel';
 
 // eslint-disable-next-line
 function TopicsComponent() {
   // eslint-disable-next-line
   return (
     <div>
+      <div className="text-2xl font-medium text-[#ed970b] pt-[18px] pb-[12px] flex justify-center">See the projects that you are going to build in this session:</div>
+      <Carousel />
       <div className="text-2xl font-medium text-[#ed970b] pt-[18px] pb-[12px] flex justify-center">Topics to be covered during the session:</div>
       <div className="flex gap-2 flex-wrap justify-center items-center">
         <div className="elementor-widget-wrap justify-center items-center !gap-3 flex-col max-w-[450px] flex-grow">

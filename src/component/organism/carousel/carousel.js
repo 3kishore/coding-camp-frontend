@@ -12,7 +12,6 @@ function Carousel() {
   let SliderDom;
   let thumbnailBorderDom;
   let thumbnailItemsDom;
-  let timeDom;
   let timeRunning = 3000;
   // let timeAutoNext = 7000;
   let runTimeOut;
@@ -50,7 +49,7 @@ function Carousel() {
     SliderDom = carouselDom.querySelector('.carousel .list');
     thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
     thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
-    timeDom = document.querySelector('.carousel .time');
+    // document.querySelector('.carousel .time');
 
 
     thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
@@ -66,24 +65,12 @@ function Carousel() {
   }
   useEffect(() => {
     triggerer()
+    // eslint-disable-next-line
   }, [])
   return (
-    <div>
+    <div className='ml-[-24px] mr-[-24px]'>
       <div className="carousel">
           <div className="list">
-              <div className="item">
-                  <img alt="alter" src={srool_3d} />
-                  <div className="content">
-                      <div className="title">3D SCROOL</div>
-                      <div className="topic font-size-sm">CLICK HERE TO WATCH PREVIEW</div>
-                      {/* <div className="des">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                      </div> */}
-                      {/* <div className="buttons">
-                          <button>SEE MORE</button>
-                      </div> */}
-                  </div>
-              </div>
               <div className="item">
                   <img alt="alter" src={ecommerce} />
                   <div className="content">
@@ -93,6 +80,19 @@ function Carousel() {
                           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
                       </div>
                       <div className="buttons">
+                          <button>SEE MORE</button>
+                      </div> */}
+                  </div>
+              </div>
+              <div className="item">
+                  <img alt="alter" src={srool_3d} />
+                  <div className="content">
+                      <div className="title">3D SCROOL</div>
+                      <div className="topic font-size-sm">CLICK HERE TO WATCH PREVIEW</div>
+                      {/* <div className="des">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                      </div> */}
+                      {/* <div className="buttons">
                           <button>SEE MORE</button>
                       </div> */}
                   </div>
@@ -113,7 +113,7 @@ function Carousel() {
           </div>
           <div className="thumbnail">
               <div className="item">
-                  <img alt="alter" src={srool_3d} />
+                  <img alt="alter" src={ecommerce} />
                   <div className="content">
                       <div className="title">
                           Name Slider
@@ -124,7 +124,7 @@ function Carousel() {
                   </div>
               </div>
               <div className="item">
-                  <img alt="alter" src={ecommerce} />
+                  <img alt="alter" src={srool_3d} />
                   <div className="content">
                       <div className="title">
                           Name Slider
