@@ -28,7 +28,7 @@ function LandingPage() {
             "Six years ago, I was just like you, so I can easily relate to your problem.
             Now, I have over 4.5 years of experience as a developer and have <span className="text-blue">worked for a company called VMware, which is a global leader in cloud technology</span>.
             I’m going to teach you what development is and how to become a developer."
-            push checkling
+            push checkling kingling
 
             <div className="pt-12px text-[#ed970b] text-2xl mt-[18px] max-[550px]:text-[16px] max-[550px]:leading-[140%]">
               Register now and get ₹1000 worth study material and get ₹5000 worth project source code
