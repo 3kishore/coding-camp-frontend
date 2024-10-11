@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 function ValidatePayment() {
   const axiosHttp = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://coding-camp-api.vercel.app'
   });
   
   axiosRetry(axiosHttp, {

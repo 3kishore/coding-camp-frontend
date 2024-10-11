@@ -8,9 +8,9 @@ function TopicsComponent() {
   // eslint-disable-next-line
   return (
     <div>
-      <div className="text-2xl font-medium text-[#ed970b] pt-[18px] pb-[12px] flex justify-center">See the projects that you are going to build in this session:</div>
+      <div className="text-2xl font-medium text-[#ed970b] pt-[18px] pb-[12px] flex justify-center max-[550px]:text-[16px] max-[550px]:leading-[140%]">Projects that you are going to build:</div>
       <Carousel />
-      <div className="text-2xl font-medium text-[#ed970b] pt-[18px] pb-[12px] flex justify-center">Topics to be covered during the session:</div>
+      <div className="text-2xl font-medium text-[#ed970b] pt-[18px] pb-[12px] flex justify-center max-[550px]:text-[16px] max-[550px]:leading-[140%]">Topics to be covered during the session:</div>
       <div className="flex gap-2 flex-wrap justify-center items-center">
         <div className="elementor-widget-wrap justify-center items-center !gap-3 flex-col max-w-[450px] flex-grow">
           {/* eslint-disable-next-line */}
@@ -21,7 +21,7 @@ function TopicsComponent() {
               <ul className="list-disc">
                 <li>Class start from basic.</li>
                 <li>All important tags will be covered.</li>
-                <li>End of the session you will gain 60% - 70% of the idea.</li>
+                <li>By the end of the session, you will become an intermediate HTML developer.</li>
               </ul>
             </div>
           </div>
@@ -35,7 +35,7 @@ function TopicsComponent() {
               <ul className="list-disc">
                 <li>Class start from basic.</li>
                 <li>All important tags will be covered.</li>
-                <li>End of the session you will gain 60% - 70% of the idea.</li>
+                <li>By the end of the session, you will become an intermediate CSS developer.</li>
               </ul>
             </div>
           </div>
@@ -49,7 +49,7 @@ function TopicsComponent() {
               <ul className="list-disc">
                 <li>Class start from basic.</li>
                 <li>All important tags will be covered.</li>
-                <li>End of the session you will gain basic knowledge of JS from 50% - 65% of the idea.</li>
+                <li>By the end of the session, you will become an intermediate JavaScript developer.</li>
               </ul>
             </div>
           </div>
@@ -57,18 +57,22 @@ function TopicsComponent() {
       </div>
 
       <div className="flex flex-col gap-4 text-[#fff]">
-        <div className="text-2xl font-medium text-[#ed970b] pt-[8px] pb-[12px] flex">What You Get at the end the session:</div>
-        <div className="text-xl">
+        <div className="text-2xl font-medium text-[#ed970b] pt-[8px] pb-[12px] flex max-[550px]:text-[16px] max-[550px]:leading-[140%]">What You Get at the end the session:</div>
+        <div className="text-xl max-[550px]:text-[16px] max-[550px]:leading-[140%]">
           <div>
             All four day session in recording format if attend or forget to attend you'll get it.
           </div>
-          <div>
-            <span className="text-[#ed970b]">Project 1:</span>
-            <div>Source code of stone papper scissor game.</div>
+          <div className='flex flex-wrap gap-2'>
+            <div className="text-[#ed970b]">Project 1:</div>
+            <div>Ecommerce Website</div>
           </div>
-          <div>
-            <span className="text-[#ed970b]">Project 2:</span>
-            <div>Source code landing page.</div>
+          <div className='flex flex-wrap gap-2'>
+            <div className="text-[#ed970b]">Project 2:</div>
+            <div>Stone paper scissor game</div>
+          </div>
+          <div className='flex flex-wrap gap-2'>
+            <div className="text-[#ed970b]">Project 3:</div>
+            <div>3D Scroll</div>
           </div>
         </div>
       </div>

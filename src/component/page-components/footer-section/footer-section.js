@@ -61,23 +61,68 @@ function FooterSectionComponent() {
     // eslint-disable-next-line
   },[minute, second])
   return (
-    <div className="flex text-[#fff] justify-center items-center gap-[12px] tutor-bottom-section z-[999]">
-      {!offerEnded && <div className="flex gap-1 justify-center items-center">
-        <div>offer Ends in:</div>
+    <div>
+      <div className="flex text-[#fff] justify-center items-center gap-[12px] tutor-bottom-section z-[999] big-screen-footer">
+        {!offerEnded && <div className="flex gap-1 justify-center items-center">
+          <div>offer Ends in:</div>
+          <div className="flex gap-1">
+            <div className="hurrytimer-timer-block">
+              <div className="hurrytimer-timer-digit">{minute}</div>
+              <div className="hurrytimer-timer-label">mins</div>
+            </div>
+            <div className="flex items-center">:</div>
+            <div className="hurrytimer-timer-block">
+              <div className="hurrytimer-timer-digit">{second}</div>
+              <div className="hurrytimer-timer-label">secs</div>
+            </div>
+          </div>
+        </div>}
+        <div>Register For The Classes At &nbsp;<span className={!offerEnded ? "line-through text-[#ed970b]" : null}>₹899</span>&nbsp;<span>{!offerEnded && '₹199'}</span></div>
+        <button className="tutor-btn" onClick={registerForSession}>Register</button>
+        {/* <div></div> */}
+        {/* <button className="tutor-btn" onClick={registerForSession}>Register <span className={!offerEnded ? "line-through text-[#000]" : null}>₹899</span>&nbsp;<span>{!offerEnded && '₹199'}</span></button> */}
+      </div>
+
+      <div className="flex text-[#fff] justify-center items-center gap-[12px] tutor-bottom-section z-[999] medium-screen-footer">
+        {!offerEnded && <div className="flex gap-1 justify-center items-center">
+          <div>offer Ends in:</div>
+          <div className="flex gap-1">
+            <div className="hurrytimer-timer-block">
+              <div className="hurrytimer-timer-digit">{minute}</div>
+              <div className="hurrytimer-timer-label">mins</div>
+            </div>
+            <div className="flex items-center">:</div>
+            <div className="hurrytimer-timer-block">
+              <div className="hurrytimer-timer-digit">{second}</div>
+              <div className="hurrytimer-timer-label">secs</div>
+            </div>
+          </div>
+        </div>}
+        {offerEnded && <div>Register For The Classes At ₹899</div>}
+        <button className="tutor-btn" onClick={registerForSession}>Register {!offerEnded && <span><span className={!offerEnded ? "line-through text-[#000]" : null}>₹899</span>&nbsp;<span>{!offerEnded && '₹199'}</span></span>}</button>
+      </div>
+
+      <div className="flex flex-wrap text-[#fff] gap-1 pt-2 items-center tutor-bottom-section z-[999] small-screen-footer">
+        {
+          !offerEnded ? <div>offer Ends in:</div> : <div>Register For The Classes</div>
+        }
         <div className="flex gap-1">
-          <div className="hurrytimer-timer-block">
-            <div className="hurrytimer-timer-digit">{minute}</div>
-            <div className="hurrytimer-timer-label">mins</div>
-          </div>
-          <div className="flex items-center">:</div>
-          <div className="hurrytimer-timer-block">
-            <div className="hurrytimer-timer-digit">{second}</div>
-            <div className="hurrytimer-timer-label">secs</div>
-          </div>
+          {!offerEnded && <div className="flex gap-1 justify-center items-center">
+            <div className="flex gap-1">
+              <div className="hurrytimer-timer-block">
+                <div className="hurrytimer-timer-digit">{minute}</div>
+                <div className="hurrytimer-timer-label">mins</div>
+              </div>
+              <div className="flex items-center">:</div>
+              <div className="hurrytimer-timer-block">
+                <div className="hurrytimer-timer-digit">{second}</div>
+                <div className="hurrytimer-timer-label">secs</div>
+              </div>
+            </div>
+          </div>}
+          <button className="tutor-btn" onClick={registerForSession}>Register For <span className={!offerEnded ? "line-through text-[#000]" : null}>₹899</span>&nbsp;<span>{!offerEnded && '₹199'}</span></button>
         </div>
-      </div>}
-      <div>Register For The Workshop For &nbsp;<span className={!offerEnded ? "line-through text-[#ed970b]" : null}>₹1299</span>&nbsp;<span>{!offerEnded && '₹499'}</span></div>
-      <button className="tutor-btn" onClick={registerForSession}>Register</button>
+      </div>
     </div>
   )
 }

@@ -551,3 +551,45 @@ body {
   font-size: 1rem !important;
   text-shadow: 2px 2px #b4b0b0;
 }
+
+.big-screen-footer {
+  display: none;
+}
+
+.small-screen-footer {
+  display: none;
+}
+
+.medium-screen-footer {
+  display: none;
+}
+
+@media (max-width: 440px) {
+  .small-screen-footer {
+    display: flex;
+    height: inherit;
+    padding-top: 14px !important;
+  }
+  .tutor-btn {
+    font-size: 14px;
+  }
+  .hurrytimer-timer-block  {
+    padding: 2px 2px;
+    font-size:12px !important;
+  }
+  .hurrytimer-timer-block .hurrytimer-timer-digit {
+    font-size:12px !important;
+  }
+}
+
+@media (min-width: 441px) and (max-width: 690px) {
+  .medium-screen-footer {
+    display: flex;
+  }
+}
+
+@media (min-width: 691px) {
+  .big-screen-footer {
+    display: flex;
+  }
+}

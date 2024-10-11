@@ -1,13 +1,19 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { APP_CONST } from "../../../constants/app-constant"
 
 function PaymentSuccess() {
   const navigate = useNavigate();
 
+  let [paymentAmount, setPaymentAmount] = useState(0);
+
+  let [paymentInfo, setPaymentInfo] = useState(null);
+
   useEffect(() => {
-    let paymentStatus = localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.IS_PAYMENT_CAPTURED))
-    if(paymentStatus) {
+    setPaymentInfo((localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.PAYMENT_INFO)) && JSON.parse(atob(localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.PAYMENT_INFO))))));
+    setPaymentAmount(localStorage.getItem('isOfferEnded') && JSON.parse(localStorage.getItem('isOfferEnded')) ? 199 : 899)
+    let paymentStatus = localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.IS_PAYMENT_CAPTURED));
+    if(paymentStatus && localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.PAYMENT_INFO))) {
       if(atob(paymentStatus) === APP_CONST.NOT_CAPTURED) {
         navigate('/payment-failed')
       }
@@ -33,20 +39,20 @@ function PaymentSuccess() {
           <div className="flex flex-col gap-6">
             <div className="flex flex-col justify-center items-center">
               <div className="text-[13px] text-[#474747]">Total Payment</div>
-              <div className="text-[24px] font-bold">INR 1,000,000</div>
+              <div className="text-[24px] font-bold">INR {paymentAmount}</div>
             </div>
             <div className="flex flex-col gap-3">
               <div className="flex gap-2">
                 <div className="p-2 rounded-md border-solid border-[1px] border-[#EDEDED] flex-grow">
-                  <div className="text-[12px] border-[#EDEDED]">Ref Number</div>
-                  <div className="text-[14px] font-medium">000085752257</div>
+                  <div className="text-[12px] border-[#EDEDED]">Order ID: </div>
+                  <div className="text-[14px] font-medium">{paymentInfo && paymentInfo.razorpay_order_id}</div>
                 </div>
                 <div className="p-2 rounded-md border-solid border-[1px] border-[#EDEDED] flex-grow">
-                  <div className="text-[12px] border-[#EDEDED]">Ref Number</div>
-                  <div className="text-[14px] font-medium">000085752257</div>
+                  <div className="text-[12px] border-[#EDEDED]">Payment ID:</div>
+                  <div className="text-[14px] font-medium">{paymentInfo && paymentInfo.razorpay_payment_id}</div>
                 </div>
               </div>
-              <div className="flex gap-2">
+              {/* <div className="flex gap-2">
                 <div className="p-2 rounded-md border-solid border-[1px] border-[#EDEDED] flex-grow">
                   <div className="text-[12px] border-[#EDEDED]">Ref Number</div>
                   <div className="text-[14px] font-medium">000085752257</div>
@@ -55,11 +61,15 @@ function PaymentSuccess() {
                   <div className="text-[12px] border-[#EDEDED]">Ref Number</div>
                   <div className="text-[14px] font-medium">000085752257</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-        <div className="text-[20px] font-bold text-center">You will recive your study in material in your registered mail ID</div>
+        <div className="text-[20px] font-bold text-center">
+          <div className="font-bold text-center text-orange">Take Screen shot or photo of this page.</div>
+          <div>You will recive your study material to your registered mail ID With in next 24hours.</div>
+          <div className="text-[28px] font-bold text-center text-green">Happy Learning &#128522;</div>
+        </div>
       </div>
     </div>
   )

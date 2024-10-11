@@ -75,7 +75,7 @@ function Carousel() {
                   <img alt="alter" src={ecommerce} />
                   <div className="content">
                       <div className="title">ECOMMERCE</div>
-                      <div className="topic font-size-sm">CLICK HERE TO WATCH PREVIEW</div>
+                      {/* <div className="topic font-size-sm">CLICK HERE TO WATCH PREVIEW</div> */}
                       {/* <div className="des">
                           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
                       </div>
@@ -88,7 +88,7 @@ function Carousel() {
                   <img alt="alter" src={srool_3d} />
                   <div className="content">
                       <div className="title">3D SCROOL</div>
-                      <div className="topic font-size-sm">CLICK HERE TO WATCH PREVIEW</div>
+                      {/* <div className="topic font-size-sm">CLICK HERE TO WATCH PREVIEW</div> */}
                       {/* <div className="des">
                           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
                       </div> */}
@@ -101,7 +101,7 @@ function Carousel() {
                   <img alt="alter" src={rock_paper_scissor} />
                   <div className="content">
                       <div className="title">GAME</div>
-                      <div className="topic font-size-sm">CLICK HERE TO WATCH PREVIEW</div>
+                      {/* <div className="topic font-size-sm">CLICK HERE TO WATCH PREVIEW</div> */}
                       {/* <div className="des">
                           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
                       </div>

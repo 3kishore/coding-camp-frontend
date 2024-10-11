@@ -31,9 +31,8 @@ function PaymentFailed() {
           </div>
           <div className="text-[18px] font-[800] text-[#dc1212]">Payment Failed!</div>
           <div className="text-[16px] font-medium text-[#000] text-center">We haven't recived your payment please check with your bank</div>
-          <div className="text-[16px] font-medium text-[#000] text-center">Need clarity from our side please mail us to this mail id
-            <a href="mailto:kishore.codingcamp@gmail.com" className="pl-1 text-blue">kishore.codingcamp@gmail.com</a>
-          </div>
+          <div className="text-[16px] font-medium text-[#000] text-center">Need clarity from our side please mail us to the below emailid</div>
+          <div className="text-[16px] font-medium text-[#000] text-center"><a href="mailto:kishore.codingcamp@gmail.com" className="pl-1 text-blue">kishore.codingcamp@gmail.com</a></div>
         </div>
         <button className="tutor-btn success" onClick={goToRegistration}>
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FB4C">

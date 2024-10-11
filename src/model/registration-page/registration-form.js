@@ -18,7 +18,7 @@ const formValidators = {
 }
 
 const axiosHttp = axios.create({
-  baseURL: 'http://localhost:5000'
+  baseURL: 'https://coding-camp-api.vercel.app'
 });
 
 axiosRetry(axiosHttp, {
@@ -69,6 +69,7 @@ const RegistrationForm = props => {
       paymentSign: "",
     })
     const payload = {
+      // amount: localStorage.getItem('isOfferEnded') && JSON.parse(localStorage.getItem('isOfferEnded')) ? 199 * 100 : 899 * 100,
       amount: 100,
       currency: 'INR',
       keyId: 'rzp_live_tG7YenWAYDDai9',

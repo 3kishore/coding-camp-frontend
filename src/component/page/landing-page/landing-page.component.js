@@ -24,15 +24,34 @@ function LandingPage() {
           <div className="text-2xl text-[#fff] font-bold max-[550px]:text-[14px] max-[550px]:leading-[140%] max-[550px]:px-[12px] text-center">
             We understand how difficult this is for you.
           </div>
+          <div className="flex flex-col justify-start">
+            <div className="text-2xl text-[#fff] font-bold max-w-[450px] border border-[#fff] rounded-[24px] p-[24px] bg-[#60686d33F] max-[550px]:text-[16px] max-[550px]:leading-[140%]">
+              <div>Get <span className="text-[#ed970b] text-2xl">3 different certificates</span> in <span className="text-[#ed970b]">HTML, CSS, and JavaScript.</span></div>
+              <div>
+                No prior knowledge is required. We will teach you over
+                <span className="text-[#ed970b]">3 weekends</span>
+                to help you understand how to code.
+              </div>
+              <button className="tutor-btn mt-[12px] w-full" onClick={registerForSession}>Register</button>
+            </div>
+          </div>
+          <div className="flex flex-col justify-end items-end">
+            <div className="text-2xl text-[#fff] font-bold flex flex-col max-w-[450px] border border-[#fff] rounded-[24px] p-[24px] bg-[#60686d33F] max-[550px]:text-[16px] max-[550px]:leading-[140%]">
+              <div>
+                <div><span className="text-[#ed970b]">What will you get?</span> Immediately after registration, you will receive study material.</div>
+                <div>You will also get additional <span className="text-[#ed970b]">3 study material and 3 project source code</span> periodically during classess.</div>
+                <div>And most importanly you will gain confidence</div>
+              </div>
+              <button className="tutor-btn mt-[12px]" onClick={registerForSession}>Register</button>
+            </div>
+          </div>
           <div className="text-2xl text-[#fff] font-bold border border-[#fff] rounded-[24px] p-[24px] bg-[#60686d33F] max-[550px]:text-[16px] max-[550px]:leading-[140%]">
             "Six years ago, I was just like you, so I can easily relate to your problem.
             Now, I have over 4.5 years of experience as a developer and have <span className="text-blue">worked for a company called VMware, which is a global leader in cloud technology</span>.
             I’m going to teach you what development is and how to become a developer."
-            push checkling kingling
-
             <div className="pt-12px text-[#ed970b] text-2xl mt-[18px] max-[550px]:text-[16px] max-[550px]:leading-[140%]">
-              Register now and get ₹1000 worth study material and get ₹5000 worth project source code
-              <button className="tutor-btn mt-[12px]" onClick={registerForSession}>Register</button>
+              Register now and get ₹1000 worth study materials and get ₹5000 worth projects source code
+              <button className="tutor-btn mt-[12px] w-full" onClick={registerForSession}>Register</button>
             </div>
           </div>
         </div>
@@ -43,7 +62,7 @@ function LandingPage() {
       <TopicsComponent />
       <DisclaimerAndPolicies />
     </div>
-  ) 
+  )
 }
 
 export default LandingPage;
