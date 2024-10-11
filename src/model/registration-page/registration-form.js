@@ -69,8 +69,8 @@ const RegistrationForm = props => {
       paymentSign: "",
     })
     const payload = {
-      // amount: localStorage.getItem('isOfferEnded') && JSON.parse(localStorage.getItem('isOfferEnded')) ? 199 * 100 : 899 * 100,
-      amount: 100,
+      amount: localStorage.getItem('isOfferEnded') && JSON.parse(localStorage.getItem('isOfferEnded')) ? 899 * 100 : 199 * 100,
+      // amount: 100,
       currency: 'INR',
       keyId: 'rzp_live_tG7YenWAYDDai9',
       KeySecret: 'POPBlMLZPVUGxhFiS2RE2OYb',

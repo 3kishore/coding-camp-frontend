@@ -11,7 +11,7 @@ function PaymentSuccess() {
 
   useEffect(() => {
     setPaymentInfo((localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.PAYMENT_INFO)) && JSON.parse(atob(localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.PAYMENT_INFO))))));
-    setPaymentAmount(localStorage.getItem('isOfferEnded') && JSON.parse(localStorage.getItem('isOfferEnded')) ? 199 : 899)
+    setPaymentAmount(localStorage.getItem('isOfferEnded') && JSON.parse(localStorage.getItem('isOfferEnded')) ? 899 : 199)
     let paymentStatus = localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.IS_PAYMENT_CAPTURED));
     if(paymentStatus && localStorage.getItem(btoa(APP_CONST.LOCAL_STORAGE_KEY.PAYMENT_INFO))) {
       if(atob(paymentStatus) === APP_CONST.NOT_CAPTURED) {

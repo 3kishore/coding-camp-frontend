@@ -53,7 +53,7 @@ const RenderRazorpay = ({
     currency,
     name: userDetails.name,
     order_id: orderId,
-    callback_url: 'https://coding-camp-rouge.vercel.app/register-for-session',
+    // callback_url: 'https://coding-camp-rouge.vercel.app/home',
     prefill: {
       name: userDetails.name,
       email: userDetails.emailId,
